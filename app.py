@@ -408,4 +408,4 @@ if __name__ == "__main__":
                                 '/releases/download/1.0.0/demo_b.pth')
     args = parser.parse_args()
     checkpoint_path = args.checkpoint
-    demo.launch()
+    demo.launch(share=True)
