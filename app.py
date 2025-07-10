@@ -16,6 +16,7 @@ from torchvision import transforms
 torch.serialization.add_safe_globals([
     np.core.multiarray.scalar,
     np.dtype,
+    np.dtype('float64'),
 ])
 
 from demo import Resize_Pad
