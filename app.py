@@ -79,6 +79,7 @@ def process(query_img, state,
             cfg_path='configs/demo_b.py'):
     cfg = Config.fromfile(cfg_path)
     width, height, _ = state['original_support_image'].shape
+    print(kp_src_np.shape)
     kp_src_np = np.array(state['kp_src']).copy().astype(np.float32)
     kp_src_np[:, 0] = kp_src_np[:, 0] / (
             width // 4) * cfg.model.encoder_config.img_size
