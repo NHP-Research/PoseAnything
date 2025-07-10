@@ -13,7 +13,10 @@ from mmpose.core import wrap_fp16_model
 from mmpose.models import build_posenet
 from torchvision import transforms
 
-torch.serialization.add_safe_globals([np.core.multiarray.scalar])
+torch.serialization.add_safe_globals([
+    np.core.multiarray.scalar,
+    np.dtype,
+])
 
 from demo import Resize_Pad
 from models import *
